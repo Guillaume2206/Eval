@@ -42,10 +42,23 @@ def VerifTLD_M1(tldOk,tld):
   return result
 
 ###### exercice 05
-
+def ipVerifFormat_Z6(adresseIp):
+  result = True
+  if adresseIp.count(".") == 3:
+    for i in range(0,len(adresseIp.split("."))):
+      if int(adresseIp.split(".")[i]) < 0 or int(adresseIp.split(".")[i]) > 255:
+        print("champ d’adresse incorrect")
+        result = False
+  else:
+    print("nombre de champs incorrect")
+    result =  False
+  return result
 
 ###### exercice 06
-
+def makeTLD_W5(dico):
+  listTLD = []
+  for elem in dico:
+    
 
 # Zone 2 ## zone pour les classes
 ###### exercice 07
@@ -85,7 +98,7 @@ def main() :
 
 	###### exercice 05
   print("exercice 05 #######################")
-
+  print(str(ipVerifFormat_Z6("192.168.2.1")) + "\n")
 
 	###### exercice 06
   print("exercice 06 #######################")
