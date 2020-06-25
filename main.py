@@ -68,19 +68,18 @@ def makeTLD_W5(dico):
 # Zone 2 ## zone pour les classes
 ###### exercice 07
 class serveurDns_U8:
-  __dns = {}
+  __dns = dict()
   def __init__(self, resolDns):
     self.__dns = resolDns
 
 ###### exercice 08
   def resolDNS_I3(self, url):
     if verifUrl_B5(url):
-      for elem in self.__dns:
-        if elem == url:
-          return url
-        else:
-          print("url introuvable")
-          return False
+      for lien, ip in self.__dns.items():
+        if lien == url:
+          return ip
+      print("url introuvable")
+      return False
     else:
       print("erreur de format de l’url")
       return False
@@ -129,7 +128,7 @@ def main() :
 
 	###### exercice 08
   print("exercice 08 #######################")
-  serverDNS.
+  print(str(serverDNS.resolDNS_I3("Youtube.com")) + "\n")
 
 	###### exercice 09
   print("exercice 09 #######################")
