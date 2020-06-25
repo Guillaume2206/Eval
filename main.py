@@ -24,7 +24,12 @@ def verifUrl_B5(url):
     return False
 
 ###### exercice 03
-
+def getTLD_V3(url):
+  if verifUrl_B5(url):
+    return url.split(".")[1]
+  else:
+    print("TLD mal formée")
+    return False
 
 ###### exercice 04
 
@@ -61,11 +66,11 @@ def main() :
 
 	###### exercice 02
   print("exercice 02 #######################")
-  print(str(verifUrl_B5("MaQueue.com")) + "\n")
+  print(str(verifUrl_B5("curiousong.fr")) + "\n")
 
 	###### exercice 03
   print("exercice 03 #######################")
-
+  print(str(getTLD_V3("curiousong.fr")) + "\n")
 
 	###### exercice 04
   print("exercice 04 #######################")
