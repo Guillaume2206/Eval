@@ -5,14 +5,14 @@ def exempleHello (msg):
 
 
 ###### exercice 01
-def makeDico_R6(filename, sep):
+def makeDico_R6(nomFichier, sep):
   dico = {}
   nbLines = 0
-  file = open(filename, "r")
+  file = open(nomFichier, "r")
   for line in file:
     nbLines += 1
     dico[line.split(sep)[0]] = line.split(sep)[1]
-  print("Création d'un dictionnaire a partir du fichier {} avec {} entrées\n".format(filename, nbLines))
+  print("Création d'un dictionnaire a partir du fichier {} avec {} entrées\n".format(nomFichier, nbLines))
   return dico
 
 ###### exercice 02
@@ -32,10 +32,17 @@ def getTLD_V3(url):
     return False
 
 ###### exercice 04
-
+def VerifTLD_M1(tldOk,tld):
+  result = False
+  for i in tldOk:
+    if tld == i:
+      result = True
+  if result == False:
+    print("TLD absente")
+  return result
 
 ###### exercice 05
-    
+
 
 ###### exercice 06
 
@@ -74,7 +81,7 @@ def main() :
 
 	###### exercice 04
   print("exercice 04 #######################")
-
+  print(str(VerifTLD_M1(["io","de","com","fr"],"fr")) + "\n")
 
 	###### exercice 05
   print("exercice 05 #######################")
