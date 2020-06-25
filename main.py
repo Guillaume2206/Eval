@@ -12,11 +12,16 @@ def makeDico_R6(filename, sep):
   for line in file:
     nbLines += 1
     dico[line.split(sep)[0]] = line.split(sep)[1]
-  print("Création d'un dictionnaire a partir du fichier {} avec {} entrées".format(filename, nbLines))
+  print("Création d'un dictionnaire a partir du fichier {} avec {} entrées\n".format(filename, nbLines))
   return dico
 
 ###### exercice 02
-
+def verifUrl_B5(url):
+  if len(url.split(".")) == 2 and len(url.split(".")[1]) <= 3:
+    return True
+  else:
+    print("url mal formée")
+    return False
 
 ###### exercice 03
 
@@ -52,11 +57,11 @@ def main() :
   
   ###### exercice 01
   print("exercice 01 #######################")
-  makeDico_R6("dns.txt", ",")
+  dicoDNS = makeDico_R6("dns.txt", ",")
 
 	###### exercice 02
   print("exercice 02 #######################")
-
+  print(str(verifUrl_B5("MaQueue.com")) + "\n")
 
 	###### exercice 03
   print("exercice 03 #######################")
